@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+ bitwarden:
+  image: tweb-nginx:latest
+  container_name: tweb
+#  volumes:
+#      - ~/docker/apps/bw-data:/data
+  ports:
+    - 8080:8080
+#  environment:
+#    SIGNUPS_ALLOWED: 'true'
