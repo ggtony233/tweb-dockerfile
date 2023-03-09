@@ -6,5 +6,5 @@ services:
   container_name: tweb
 
   ports:
-    - 8080:8080
+    - 8080:80
 
