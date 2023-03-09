@@ -1,4 +1,4 @@
-## introduce
+## Introduce
 This is a project that makes the open source project [tweb](https://github.com/morethanwords/tweb) on github into a docker image, which is used to set up on your own slag machine. I checked dockerhub and couldn’t find it. used it, so I made one myself
 ## Usage
 Clone this project locally, then
