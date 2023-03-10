@@ -1,0 +1,10 @@
+FROM orangeci/git-clone-yyds:latest AS telegram-web
+RUN git clone https://gitee.com/stone122/tweb.git /root/tweb
+FROM node:lts-alpine3.17 AS install
+COPY --from=telegram-web /root/tweb /root/tweb
+WORKDIR /root/tweb 
+RUN cd /root/tweb && npm install && npm run build
+FROM nginx:alpine
+COPY --from=install /root/tweb/public/ /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
