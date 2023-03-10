@@ -1,7 +1,6 @@
 version: '3'
 
 services:
- telegram_web:
   image: tweb-nginx:latest
   container_name: tweb
 
