@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+ tweb:
   image: tweb-nginx:latest
   container_name: tweb
 
