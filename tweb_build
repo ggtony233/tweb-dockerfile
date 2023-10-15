@@ -1,5 +1,5 @@
 FROM extensions/git-clone:latest AS telegram-web
-RUN git clone https://gitee.com/stone122/tweb.git /root/tweb
+RUN git clone https://ghproxy.com/https://github.com/morethanwords/tweb.git /root/tweb
 FROM node:lts-slim AS install
 COPY --from=telegram-web /root/tweb /root/tweb
 WORKDIR /root/tweb 
