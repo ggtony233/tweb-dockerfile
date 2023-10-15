@@ -5,8 +5,12 @@
 克隆本项目到本地，然后
 ```sh
 docker build -t <镜像名字:标签> -f ./tweb_build .
+#arm
+docker build -t <镜像名字:标签> -f ./tweb_build_arm64 .
 #根据你自己的想法修改tweb.yml里的内容
 docker-compose -f tweb.yml up -d
+
 ```
 如果你没有做修改此时应该能通过127.0.0.1:8080使用了
 
+>tips:这本身不是什么高大上的东西，仅仅是依据dockerfile的语法跑了上面那个项目的过程而已。
