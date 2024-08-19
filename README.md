@@ -5,8 +5,6 @@
 克隆本项目到本地，然后
 ```sh
 docker build -t <镜像名字:标签> -f ./tweb_build .
-#arm
-docker build -t <镜像名字:标签> -f ./tweb_build_arm64 .
 #根据你自己的想法修改tweb.yml里的内容
 docker-compose -f tweb.yml up -d
 
