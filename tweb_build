@@ -1,9 +1,9 @@
-FROM extensions/git-clone:latest AS telegram-web
-RUN git clone https://ghproxy.com/https://github.com/morethanwords/tweb.git /root/tweb
+FROM bitnami/git:latest AS telegram-web
+RUN git clone https://github.com/morethanwords/tweb.git /root/tweb
 FROM node:lts-slim AS install
 COPY --from=telegram-web /root/tweb /root/tweb
 WORKDIR /root/tweb 
-RUN cd /root/tweb && npm install && npm run build
+RUN cd /root/tweb && pnpm install && node build
 FROM nginx:alpine
 COPY --from=install /root/tweb/public/ /usr/share/nginx/html
 EXPOSE 80
